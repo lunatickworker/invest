@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이지메디(EasyMedi) 투자제안서</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .card-shadow {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-pattern {
+            background-image: radial-gradient(circle at 25px 25px, rgba(255, 255, 255, .2) 2%, transparent 0%), radial-gradient(circle at 75px 75px, rgba(255, 255, 255, .2) 2%, transparent 0%);
+            background-size: 100px 100px;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+            margin: 3rem 0;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 400px;
+            width: 100%;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .stats-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #667eea;
+        }
+
+        .icon-bg {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            background-size: 200% 200%;
+            animation: gradient 3s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .table-hover tr:hover {
+            background-color: #f8fafc;
+        }
+
+        .pricing-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 0.75rem;
+            height: 0.75rem;
+            background: #667eea;
+            border-radius: 50%;
+        }
+
+        @media print {
+            body {
+                background: white !important;
+            }
+
+            .gradient-bg {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section class="gradient-bg hero-pattern text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-8">
+                <div class="inline-block bg-white bg-opacity-20 rounded-full px-6 py-3 mb-6">
+                    <span class="text-white font-medium">의료 IT 혁신 솔루션</span>
+                </div>
+                <h1 class="text-6xl font-black mb-4">
+                    이지메디
+                    <span class="text-yellow-300">(EasyMedi)</span>
+                </h1>
+                <p class="text-3xl font-bold mb-6">병원의 오늘, 혁신을 심다</p>
+                <p class="text-xl mb-8 opacity-90">소규모 의원 맞춤형 '초간편' AI 운영 자동화</p>
+            </div>
+
+            <div class="bg-white bg-opacity-10 rounded-3xl p-8 backdrop-filter backdrop-blur-lg max-w-4xl mx-auto">
+                <div class="grid grid-cols-2 gap-8 text-center">
+                    <div>
+                        <i class="fas fa-user-tie text-4xl mb-4"></i>
+                        <p class="text-lg font-semibold">발표자</p>
+                        <p class="text-xl font-bold">에스엠씨 대표</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-calendar text-4xl mb-4"></i>
+                        <p class="text-lg font-semibold">제작</p>
+                        <p class="text-xl font-bold">2025년 8월</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="bg-gray-50 min-h-screen">
+        <div class="container mx-auto px-6 py-12">
+
+            <!-- Problem Statement -->
+            <section class="mb-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black text-gray-800 mb-4">개인 병원, 이런 고민이 있어요!</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="feature-card rounded-3xl p-8 text-center">
+                        <div class="icon-bg w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-dollar-sign text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">너무 비싸고 복잡한 시스템</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• 대형 병원용 시스템, 가격이 너무 비싸요</li>
+                            <li>• 실제로 사용하는 기능은 몇 개 안 돼요</li>
+                            <li>• 필요 없는 기능에도 돈을 내야 해요</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card rounded-3xl p-8 text-center">
+                        <div class="icon-bg w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-edit text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">수기/구식 관리의 불편함</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• 아직도 약품 재고를 손으로 관리</li>
+                            <li>• 예약과 접수에 많은 시간이 낭비돼요</li>
+                            <li>• 실수와 오류가 자주 발생해요</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card rounded-3xl p-8 text-center">
+                        <div class="icon-bg w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-clock text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">환자 흐름의 병목 현상</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• 예약-접수-진료-수납-퇴원 과정이 복잡</li>
+                            <li>• 환자 대기 시간이 너무 길어져요</li>
+                            <li>• 병원과 환자 모두 피로감 증가</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <!-- Solution Overview -->
+            <section class="mb-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black text-gray-800 mb-4">이지메디가 해결해드립니다!</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-600 mx-auto"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="feature-card rounded-3xl p-8 text-center">
+                        <div class="bg-green-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-feather text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">가볍고 간단한 솔루션</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• 꼭 필요한 핵심 기능만 담았어요</li>
+                            <li>• 합리적인 가격으로 부담 없어요</li>
+                            <li>• 사용하기 쉽고 직관적이에요</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card rounded-3xl p-8 text-center">
+                        <div class="bg-blue-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-robot text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">AI 기반 자동화</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• 모바일로 간편한 예약과 접수</li>
+                            <li>• 의약품 재고를 똑똑하게 관리</li>
+                            <li>• 결제와 수납이 자동으로 처리</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card rounded-3xl p-8 text-center">
+                        <div class="bg-purple-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-shield-alt text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">안전한 데이터 관리</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• 병원 내부에 직접 설치해요</li>
+                            <li>• 중요한 환자 정보를 안전하게 보호</li>
+                            <li>• 자동 백업으로 데이터 손실 걱정 없어요</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <!-- Core Features -->
+            <section class="mb-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black text-gray-800 mb-4">이지메디의 5대 핵심기능</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-600 mx-auto"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="feature-card rounded-2xl p-6">
+                        <div class="bg-blue-500 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-calendar-check text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">초간편 예약 & 접수</h3>
+                        <ul class="text-gray-600 text-sm space-y-1">
+                            <li>• 홈페이지/모바일 간편 예약</li>
+                            <li>• QR/키오스크 체크인</li>
+                            <li>• 환자 대기/호명 시스템</li>
+                            <li>• 종이 예약부 작성 불필요!</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card rounded-2xl p-6">
+                        <div class="bg-green-500 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-pills text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">스마트 의약품 관리</h3>
+                        <ul class="text-gray-600 text-sm space-y-1">
+                            <li>• 실시간 약품 재고 확인</li>
+                            <li>• 유통기한 알림 자동화</li>
+                            <li>• 자동 발주/불출 기록</li>
+                            <li>• 재고 부족/폐기 손실 방지!</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card rounded-2xl p-6">
+                        <div class="bg-purple-500 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-credit-card text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">똑똑한 수납 & 결제</h3>
+                        <ul class="text-gray-600 text-sm space-y-1">
+                            <li>• 카드/현금/계좌 통합 관리</li>
+                            <li>• 보험청구 자동 연동</li>
+                            <li>• 전자의수증 발행</li>
+                            <li>• 미수납 관리 자동화!</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card rounded-2xl p-6">
+                        <div class="bg-indigo-500 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-file-medical text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">차트 & 진료기록 연동</h3>
+                        <ul class="text-gray-600 text-sm space-y-1">
+                            <li>• 간편한 차트 작성/조회</li>
+                            <li>• 환자 진료 이력 관리</li>
+                            <li>• 진단서/소견서 자동 생성</li>
+                            <li>• 기존 EMR과 완벽 연동!</li>
+                        </ul>
+                    </div>
+
+                    <div class="feature-card rounded-2xl p-6 md:col-span-2 lg:col-span-1">
+                        <div class="bg-pink-500 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-chart-line text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">통계 & 보안 관리</h3>
+                        <ul class="text-gray-600 text-sm space-y-1">
+                            <li>• 진료/매출 통계 분석</li>
+                            <li>• 자동 데이터 백업</li>
+                            <li>• 개인정보 보호 시스템</li>
+                            <li>• 안전하고 스마트한 병원 운영!</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <!-- Competitive Analysis -->
+            <section class="mb-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black text-gray-800 mb-4">경쟁사와 뭐가 다를까요?</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-red-500 to-yellow-600 mx-auto"></div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 card-shadow">
+                    <div class="overflow-x-auto">
+                        <table class="w-full table-hover">
+                            <thead>
+                                <tr class="border-b-2 border-gray-200">
+                                    <th class="text-left py-4 px-6 font-bold text-gray-800">비교 항목</th>
+                                    <th class="text-center py-4 px-6 font-bold text-gray-800">수기/엑셀</th>
+                                    <th class="text-center py-4 px-6 font-bold text-gray-800">경쟁사 솔루션</th>
+                                    <th class="text-center py-4 px-6 font-bold text-blue-600">이지메디</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-4 px-6 font-semibold">비용</td>
+                                    <td class="text-center py-4 px-6">
+                                        <div class="flex justify-center items-center space-x-1">
+                                            <span class="text-yellow-500">★★★</span>
+                                            <span class="text-gray-300">☆☆</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">저렴</p>
+                                    </td>
+                                    <td class="text-center py-4 px-6">
+                                        <div class="flex justify-center items-center space-x-1">
+                                            <span class="text-yellow-500">★</span>
+                                            <span class="text-gray-300">☆☆☆☆</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">비쌈</p>
+                                    </td>
+                                    <td class="text-center py-4 px-6">
+                                        <div class="flex justify-center items-center space-x-1">
+                                            <span class="text-yellow-500">★★★★</span>
+                                            <span class="text-gray-300">☆</span>
+                                        </div>
+                                        <p class="text-sm text-blue-600 font-semibold">합리적</p>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-4 px-6 font-semibold">기능</td>
+                                    <td class="text-center py-4 px-6">
+                                        <div class="flex justify-center items-center space-x-1">
+                                            <span class="text-yellow-500">★</span>
+                                            <span class="text-gray-300">☆☆☆☆</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">제한적</p>
+                                    </td>
+                                    <td class="text-center py-4 px-6">
+                                        <div class="flex justify-center items-center space-x-1">
+                                            <span class="text-yellow-500">★★★</span>
+                                            <span class="text-gray-300">☆☆</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">많지만 불필요</p>
+                                    </td>
+                                    <td class="text-center py-4 px-6">
+                                        <div class="flex justify-center items-center space-x-1">
+                                            <span class="text-yellow-500">★★★★★</span>
+                                        </div>
+                                        <p class="text-sm text-blue-600 font-semibold">딱 필요한 핵심</p>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-100">
+                                    <td class="py-4 px-6 font-semibold">사용성</td>
+                                    <td class="text-center py-4 px-6">
+                                        <div class="flex justify-center items-center space-x-1">
+                                            <span class="text-yellow-500">★</span>
+                                            <span class="text-gray-300">☆☆☆☆</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">복잡/오류↑</p>
+                                    </td>
+                                    <td class="text-center py-4 px-6">
+                                        <div class="flex justify-center items-center space-x-1">
+                                            <span class="text-yellow-500">★★</span>
+                                            <span class="text-gray-300">☆☆☆</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">복잡/교육필요</p>
+                                    </td>
+                                    <td class="text-center py-4 px-6">
+                                        <div class="flex justify-center items-center space-x-1">
+                                            <span class="text-yellow-500">★★★★★</span>
+                                        </div>
+                                        <p class="text-sm text-blue-600 font-semibold">직관적/간편</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4 px-6 font-semibold">효율성</td>
+                                    <td class="text-center py-4 px-6">
+                                        <div class="flex justify-center items-center space-x-1">
+                                            <span class="text-yellow-500">★</span>
+                                            <span class="text-gray-300">☆☆☆☆</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">매우 낮음</p>
+                                    </td>
+                                    <td class="text-center py-4 px-6">
+                                        <div class="flex justify-center items-center space-x-1">
+                                            <span class="text-yellow-500">★★★</span>
+                                            <span class="text-gray-300">☆☆</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600">보통</p>
+                                    </td>
+                                    <td class="text-center py-4 px-6">
+                                        <div class="flex justify-center items-center space-x-1">
+                                            <span class="text-yellow-500">★★★★★</span>
+                                        </div>
+                                        <p class="text-sm text-blue-600 font-semibold">매우 높음</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="mt-8 p-6 bg-blue-50 rounded-2xl">
+                        <h3 class="text-xl font-bold text-blue-800 mb-4">주요 경쟁사 현황</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-5 gap-x-2 gap-y-4 text-sm">
+                            <div class="bg-white w-47 p-4 rounded-xl">
+                                <h4 class="font-bold text-gray-800">유비케어(의사랑)</h4>
+                                <p>• 시장점유율 1위 (40%)</p>
+                                <p>• 설치비: ~100만원(PC당 설치비)</p>
+                                <p>• 전국구 대리점 보유</p>
+                            </div>
+                            <div class="bg-white w-47 p-4 rounded-xl">
+                                <h4 class="font-bold text-gray-800">비트컴퓨터</h4>
+                                <p>• 시장점유율 2위</p>
+                                <p>• 정형외과 중심(PC당 설치비)</p>
+                                <p>• 의료보험 청구 특화</p>
+                            </div>
+                            <div class="bg-white w-47 p-4 rounded-xl">
+                                <h4 class="font-bold text-gray-800">이지케어텍</h4>
+                                <p>• 설치비: 고가</p>
+                                <p>• HIS 전문</p>
+                                <p>• 대학병원 중심</p>
+                            </div>
+                            <div class="bg-white w-47 p-4 rounded-xl">
+                                <h4 class="font-bold text-gray-800">스마트닥터</h4>
+                                <p>• 설치비: 10만워~30만원</p>
+                                <p>• 환자 데이터 관리 솔루션</p>
+                                <p>• 대학병원/종합병원</p>
+                            </div>
+                            <div class="bg-white w-47 p-4 rounded-xl">
+                                <h4 class="font-bold text-gray-800">메디밴스</h4>
+                                <p>• 설치비: 10만~15만원</p>
+                                <p>• 체외진단 기기 및 데이터 분석 서비스</p>
+                                <p>• 동네의원</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-8">
+                    <p class="text-2xl font-bold text-blue-600">이지메디는 꼭 필요한 기능만 합리적 가격으로 제공합니다!</p>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <!-- Market Analysis -->
+            <section class="mb-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black text-gray-800 mb-4">시장 규모, 얼마나 큰가요?</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-green-500 to-cyan-600 mx-auto"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-3xl p-8 card-shadow">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">전국 의원 수 현황</h3>
+                        <div class="text-center mb-6">
+                            <div class="stats-number">37,200+</div>
+                            <p class="text-xl text-gray-600">2025년 예상 의원 수</p>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center p-4 bg-gray-50 rounded-xl">
+                                <span class="font-semibold">2024년 현황</span>
+                                <span class="text-2xl font-bold text-blue-600">36,985개</span>
+                            </div>
+                            <div class="flex justify-between items-center p-4 bg-green-50 rounded-xl">
+                                <span class="font-semibold">연평균 성장률</span>
+                                <span class="text-2xl font-bold text-green-600">3-5%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-3xl p-8 card-shadow">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">지역별 분포</h3>
+                        <div class="chart-container">
+                            <canvas id="regionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-white rounded-3xl p-8 card-shadow">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">타겟 시장 분석</h3>
+                    <div class="chart-container">
+                        <canvas id="targetMarketChart"></canvas>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <p class="text-xl font-bold text-blue-600">시장 잠재력 100% - 3만 7천여 의원이 모두 잠재 고객!</p>
+                        <p class="text-gray-600 mt-2">연평균 3-5% 성장하는 안정적 시장</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <!-- Revenue Projection -->
+            <section class="mb-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black text-gray-800 mb-4">3개년 매출 전망</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-600 mx-auto"></div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 card-shadow">
+                    <div class="chart-container mb-8">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center p-6 bg-blue-50 rounded-2xl">
+                            <h3 class="text-xl font-bold text-blue-800 mb-4">1년차 (2025년)</h3>
+                            <div class="stats-number text-2xl text-blue-600">2.7억원</div>
+                            <p class="text-gray-600 mb-4">목표 고객수: 150개 의원</p>
+                            <p class="text-sm text-gray-500">베타 테스트 → 분기별 35개 의원 추가</p>
+                        </div>
+
+                        <div class="text-center p-6 bg-green-50 rounded-2xl">
+                            <h3 class="text-xl font-bold text-green-800 mb-4">2년차 (2026년)</h3>
+                            <div class="stats-number text-2xl text-green-600">10.8억원</div>
+                            <p class="text-gray-600 mb-4">목표 고객수: 500개 의원</p>
+                            <p class="text-sm text-gray-500">레퍼런스 확보 + 마케팅 본격화</p>
+                        </div>
+
+                        <div class="text-center p-6 bg-purple-50 rounded-2xl">
+                            <h3 class="text-xl font-bold text-purple-800 mb-4">3년차 (2027년)</h3>
+                            <div class="stats-number text-2xl text-purple-600">28.8억원</div>
+                            <p class="text-gray-600 mb-4">목표 고객수: 1,200개 의원</p>
+                            <p class="text-sm text-gray-500">시장 점유율 3.2% + 프리미엄 기능</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <!-- Business Model -->
+            <section class="mb-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black text-gray-800 mb-4">이지메디, 어떻게 돈을 버나요?</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-yellow-500 to-red-600 mx-auto"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                    <div class="pricing-card bg-white rounded-3xl p-8 text-center card-shadow">
+                        <div class="bg-blue-500 text-white py-2 px-6 rounded-full text-sm font-bold mb-4 inline-block">
+                            Start 입문</div>
+                        <div class="text-4xl font-black text-blue-600 mb-2">8.9만원</div>
+                        <p class="text-gray-500 mb-6">/월</p>
+                        <p class="font-bold text-gray-800 mb-4">소규모 개인의원</p>
+                        <ul class="text-left space-y-2 text-gray-600">
+                            <li>• 기본 예약/접수 시스템</li>
+                            <li>• 간단한 환자 관리</li>
+                            <li>• 기초 통계 리포트</li>
+                            <li>• 클라우드 백업</li>
+                            <li>• 기본 고객지원</li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="pricing-card bg-white rounded-3xl p-8 text-center card-shadow border-4 border-green-500 relative">
+                        <div
+                            class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-green-500 text-white py-1 px-4 rounded-full text-sm font-bold">
+                            인기!</div>
+                        <div class="bg-green-500 text-white py-2 px-6 rounded-full text-sm font-bold mb-4 inline-block">
+                            Plus 성장</div>
+                        <div class="text-4xl font-black text-green-600 mb-2">18.9만원</div>
+                        <p class="text-gray-500 mb-6">/월</p>
+                        <p class="font-bold text-gray-800 mb-4">중간 규모 의원</p>
+                        <ul class="text-left space-y-2 text-gray-600">
+                            <li>• 전체 핵심기능 포함</li>
+                            <li>• 의약품 재고 관리</li>
+                            <li>• 자동 수납/결제</li>
+                            <li>• EMR 연동</li>
+                            <li>• 고급 통계 분석</li>
+                            <li>• 우선 고객지원</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card bg-white rounded-3xl p-8 text-center card-shadow">
+                        <div
+                            class="bg-purple-500 text-white py-2 px-6 rounded-full text-sm font-bold mb-4 inline-block">
+                            Pro 전문가</div>
+                        <div class="text-4xl font-black text-purple-600 mb-2">29.9만원</div>
+                        <p class="text-gray-500 mb-6">/월</p>
+                        <p class="font-bold text-gray-800 mb-4">대형 의원/체인</p>
+                        <ul class="text-left space-y-2 text-gray-600">
+                            <li>• 모든 기능 무제한</li>
+                            <li>• 다지점 통합 관리</li>
+                            <li>• 고급 AI 분석</li>
+                            <li>• 커스터마이징</li>
+                            <li>• 전용 계정 매니저</li>
+                            <li>• 24/7 전화지원</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 card-shadow">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">추가 수익원</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="text-center p-4 bg-gray-50 rounded-xl">
+                            <i class="fas fa-tools text-3xl text-blue-500 mb-3"></i>
+                            <h4 class="font-bold text-gray-800">설치/교육</h4>
+                            <p class="text-2xl font-bold text-blue-600">50-100만원</p>
+                            <p class="text-sm text-gray-500">(일회성)</p>
+                        </div>
+                        <div class="text-center p-4 bg-gray-50 rounded-xl">
+                            <i class="fas fa-cog text-3xl text-green-500 mb-3"></i>
+                            <h4 class="font-bold text-gray-800">커스터마이징</h4>
+                            <p class="text-2xl font-bold text-green-600">10-50만원</p>
+                            <p class="text-sm text-gray-500">/월</p>
+                        </div>
+                        <div class="text-center p-4 bg-gray-50 rounded-xl">
+                            <i class="fas fa-database text-3xl text-purple-500 mb-3"></i>
+                            <h4 class="font-bold text-gray-800">데이터 마이그레이션</h4>
+                            <p class="text-2xl font-bold text-purple-600">100-300만원</p>
+                            <p class="text-sm text-gray-500">(일회성)</p>
+                        </div>
+                        <div class="text-center p-4 bg-gray-50 rounded-xl">
+                            <i class="fas fa-handshake text-3xl text-orange-500 mb-3"></i>
+                            <h4 class="font-bold text-gray-800">파트너 수수료</h4>
+                            <p class="text-2xl font-bold text-orange-600">10-15%</p>
+                            <p class="text-sm text-gray-500">매출의</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <!-- Marketing Strategy -->
+            <section class="mb-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black text-gray-800 mb-4">고객을 어떻게 모으나요?</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-pink-500 to-violet-600 mx-auto"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-3xl p-8 card-shadow">
+                        <h3 class="text-2xl font-bold text-blue-600 mb-6 flex items-center">
+                            <i class="fas fa-laptop mr-3"></i>
+                            온라인 마케팅
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="timeline-item">
+                                <h4 class="font-bold text-gray-800">의사 커뮤니티 타겟팅</h4>
+                                <p class="text-gray-600">닥터넷, 의협신문 등 전문 채널</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4 class="font-bold text-gray-800">유튜브 & 블로그</h4>
+                                <p class="text-gray-600">병원 운영 노하우, 성공사례 중심 콘텐츠</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4 class="font-bold text-gray-800">소셜미디어 & 네이버</h4>
+                                <p class="text-gray-600">카카오톡 채널, 네이버 블로그</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4 class="font-bold text-gray-800">온라인 세미나</h4>
+                                <p class="text-gray-600">병원 경영 효율화 웨비나 정기 개최</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-3xl p-8 card-shadow">
+                        <h3 class="text-2xl font-bold text-green-600 mb-6 flex items-center">
+                            <i class="fas fa-handshake mr-3"></i>
+                            오프라인 마케팅
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="timeline-item">
+                                <h4 class="font-bold text-gray-800">의료 박람회 & 전시회</h4>
+                                <p class="text-gray-600">KIMES, 병원경영박람회 등 직접 데모</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4 class="font-bold text-gray-800">레퍼런스 병원 활용</h4>
+                                <p class="text-gray-600">성공 사례 병원과 협력하여 견학 프로그램</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4 class="font-bold text-gray-800">파트너십 구축</h4>
+                                <p class="text-gray-600">EMR 업체, 의료기기 업체와의 전략적 제휴</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4 class="font-bold text-gray-800">원장 네트워킹</h4>
+                                <p class="text-gray-600">의사회, 개원의 모임 등을 통한 직접적 관계 구축</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-white rounded-3xl p-8 card-shadow">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">고객 획득 단계별 전략</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                        <div class="text-center p-4 bg-blue-50 rounded-xl">
+                            <div
+                                class="bg-blue-500 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-white font-bold">1</span>
+                            </div>
+                            <h4 class="font-bold text-blue-800">인지도 확산</h4>
+                            <p class="text-sm text-gray-600">콘텐츠 마케팅, SEO, 온라인 광고</p>
+                        </div>
+                        <div class="text-center p-4 bg-green-50 rounded-xl">
+                            <div
+                                class="bg-green-500 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-white font-bold">2</span>
+                            </div>
+                            <h4 class="font-bold text-green-800">관심 유도</h4>
+                            <p class="text-sm text-gray-600">무료 체험, 웨비나, 백서 제공</p>
+                        </div>
+                        <div class="text-center p-4 bg-purple-50 rounded-xl">
+                            <div
+                                class="bg-purple-500 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-white font-bold">3</span>
+                            </div>
+                            <h4 class="font-bold text-purple-800">신뢰 구축</h4>
+                            <p class="text-sm text-gray-600">사례 연구, 고객 추천, 데모</p>
+                        </div>
+                        <div class="text-center p-4 bg-orange-50 rounded-xl">
+                            <div
+                                class="bg-orange-500 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-white font-bold">4</span>
+                            </div>
+                            <h4 class="font-bold text-orange-800">계약 체결</h4>
+                            <p class="text-sm text-gray-600">맞춤 제안, 할인 혜택, 온보딩</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <!-- Team Introduction -->
+            <section class="mb-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black text-gray-800 mb-4">이지메디 팀 소개</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 mx-auto"></div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 card-shadow">
+                    <div class="text-center mb-8">
+                        <div
+                            class="w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+                            <i class="fas fa-user-tie text-white text-4xl"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-800 mb-2">에스엠씨 대표</h3>
+                        <p class="text-xl text-blue-600 font-semibold">15년 의료 IT 시스템 개발 경험</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                                <i class="fas fa-graduation-cap text-blue-500 mr-3"></i>
+                                학력 및 경력
+                            </h4>
+                            <ul class="space-y-3 text-gray-600">
+                                <li class="flex items-center">
+                                    <i class="fas fa-university text-blue-500 mr-3 w-5"></i>
+                                    아주대학교 컴퓨터공학과
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-globe text-green-500 mr-3 w-5"></i>
+                                    University of Queensland 박사과정 수료
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-laptop-medical text-purple-500 mr-3 w-5"></i>
+                                    15년 의료 IT 시스템 개발 경험
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-hospital text-red-500 mr-3 w-5"></i>
+                                    대형 병원 EMR/PACS 연동 시스템 구축 다수
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                                <i class="fas fa-star text-yellow-500 mr-3"></i>
+                                핵심 역량
+                            </h4>
+                            <ul class="space-y-3 text-gray-600">
+                                <li class="flex items-center">
+                                    <i class="fas fa-project-diagram text-blue-500 mr-3 w-5"></i>
+                                    해외 BOS 시스템개발 프로젝트 리더
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-cube text-green-500 mr-3 w-5"></i>
+                                    미디어 솔루션 아키텍처 설계
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-link text-purple-500 mr-3 w-5"></i>
+                                    병원 시스템 통합 전문가
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-robot text-red-500 mr-3 w-5"></i>
+                                    AI/ML 실무 적용 경험
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 p-6 bg-gray-50 rounded-2xl">
+                        <h4 class="text-xl font-bold text-gray-800 mb-4">핵심 팀원 (예정)</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="bg-white p-4 rounded-xl text-center">
+                                <i class="fas fa-paint-brush text-3xl text-pink-500 mb-3"></i>
+                                <h5 class="font-bold text-gray-800">UI/UX 디자이너</h5>
+                                <p class="text-sm text-gray-600">의료 인터페이스 전문, 5년+ 경력</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl text-center">
+                                <i class="fas fa-bullhorn text-3xl text-blue-500 mb-3"></i>
+                                <h5 class="font-bold text-gray-800">마케팅 전문가</h5>
+                                <p class="text-sm text-gray-600">B2B SaaS 마케팅, 헬스케어 경험</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl text-center">
+                                <i class="fas fa-server text-3xl text-green-500 mb-3"></i>
+                                <h5 class="font-bold text-gray-800">백엔드 개발자</h5>
+                                <p class="text-sm text-gray-600">클라우드 인프라, 보안 시스템 전문</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 text-center p-6 bg-blue-50 rounded-2xl">
+                        <h4 class="text-2xl font-bold text-blue-800 mb-4">팀의 경쟁력</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                            <div>
+                                <i class="fas fa-stethoscope text-3xl text-blue-500 mb-3"></i>
+                                <h5 class="font-bold text-gray-800">의료 도메인 전문성</h5>
+                                <p class="text-gray-600">15년간의 병원 시스템 개발 경험</p>
+                            </div>
+                            <div>
+                                <i class="fas fa-rocket text-3xl text-green-500 mb-3"></i>
+                                <h5 class="font-bold text-gray-800">기술적 우위</h5>
+                                <p class="text-gray-600">최신 AI/ML 기술과 클라우드 인프라</p>
+                            </div>
+                            <div>
+                                <i class="fas fa-users text-3xl text-purple-500 mb-3"></i>
+                                <h5 class="font-bold text-gray-800">시장 이해도</h5>
+                                <p class="text-gray-600">소규모 의원의 현실적 요구사항 반영</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-8">
+                    <p class="text-2xl font-bold text-gradient">의료 IT의 미래를 함께 만들어갈 전문가 팀</p>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <!-- Fund Allocation -->
+            <section class="mb-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black text-gray-800 mb-4">투자금은 이렇게 사용됩니다!</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-orange-500 to-pink-600 mx-auto"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-3xl p-8 card-shadow">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">총 5억원의 체계적이고 효율적인 배분</h3>
+                        <div class="chart-container">
+                            <canvas id="fundChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-2xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-blue-600 mb-4 flex items-center">
+                                <i class="fas fa-code text-blue-500 mr-3"></i>
+                                개발 인력 (2억원 - 40%)
+                            </h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>• 시니어 개발자 2명: 월 800만원 × 24개월</li>
+                                <li>• 주니어 개발자 1명: 월 500만원 × 24개월</li>
+                                <li>• UI/UX 디자이너: 월 600만원 × 18개월</li>
+                                <li>• 개발 도구 & 라이센스: 연 2,000만원</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white rounded-2xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-green-600 mb-4 flex items-center">
+                                <i class="fas fa-bullhorn text-green-500 mr-3"></i>
+                                마케팅 & 영업 (1.5억원 - 30%)
+                            </h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>• 디지털 마케팅: 월 300만원 × 24개월</li>
+                                <li>• 콘텐츠 제작: 월 200만원 × 24개월</li>
+                                <li>• 박람회 & 이벤트: 연 2,000만원</li>
+                                <li>• 영업 인력: 월 400만원 × 18개월</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white rounded-2xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-purple-600 mb-4 flex items-center">
+                                <i class="fas fa-server text-purple-500 mr-3"></i>
+                                서버 & 인프라 (1억원 - 20%)
+                            </h4>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>• 클라우드 서버: 월 200만원 × 24개월</li>
+                                <li>• 보안 & 백업: 월 100만원 × 24개월</li>
+                                <li>• AI/ML 인프라: 월 150만원 × 18개월</li>
+                                <li>• 통신 & 네트워크: 월 50만원 × 24개월</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white rounded-2xl p-6 card-shadow">
+                            <h4 class="text-xl font-bold text-orange-600 mb-4 flex items-center">
+                                <i class="fas fa-cogs text-orange-500 mr-3"></i>
+                                운영 자금 (0.5억원 - 10%)
+                            </h4>
+                            <p class="text-gray-600">일반 운영비, 법무/회계, 기타 비용</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-white rounded-3xl p-8 card-shadow">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">투자 단계별 마일스톤</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                        <div class="text-center p-4 bg-blue-50 rounded-xl">
+                            <div
+                                class="bg-blue-500 text-white w-15 h-15 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="font-bold">0-6M</span>
+                            </div>
+                            <h4 class="font-bold text-blue-800">제품 개발</h4>
+                            <p class="text-sm text-gray-600">MVP 완성, 베타 테스트</p>
+                        </div>
+                        <div class="text-center p-4 bg-green-50 rounded-xl">
+                            <div
+                                class="bg-green-500 text-white w-15 h-15 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="font-bold">6-12M</span>
+                            </div>
+                            <h4 class="font-bold text-green-800">시장 출시</h4>
+                            <p class="text-sm text-gray-600">정식 런칭, 초기 고객 확보</p>
+                        </div>
+                        <div class="text-center p-4 bg-purple-50 rounded-x1">
+                            <div
+                                class="bg-purple-500 text-white w-15 h-15 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="font-bold">12-18M</span>
+                            </div>
+                            <h4 class="font-bold text-purple-800">확장</h4>
+                            <p class="text-sm text-gray-600">마케팅 강화, 기능 고도화</p>
+                        </div>
+                        <div class="text-center p-4 bg-orange-50 rounded-xl">
+                            <div
+                                class="bg-orange-500 text-white w-15 h-15 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="font-bold">18-24M</span>
+                            </div>
+                            <h4 class="font-bold text-orange-800">성장</h4>
+                            <p class="text-sm text-gray-600">시리즈A 준비, 해외 진출</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <!-- Future Vision -->
+            <section class="mb-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black text-gray-800 mb-4">이지메디의 미래 비전과 목표</h2>
+                    <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-3xl p-8 card-shadow">
+                        <h3 class="text-2xl font-bold text-blue-600 mb-6 flex items-center">
+                            <i class="fas fa-rocket mr-3"></i>
+                            단기 목표 (1-3년)
+                        </h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center p-4 bg-blue-50 rounded-xl">
+                                <div class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-percentage text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">시장 점유율 5%</h4>
+                                    <p class="text-gray-600">전국 1,800개 의원 확보</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center p-4 bg-green-50 rounded-xl">
+                                <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-won-sign text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">연매출 30억원</h4>
+                                    <p class="text-gray-600">월평균 2.5억원 안정적 수익</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center p-4 bg-purple-50 rounded-xl">
+                                <div class="bg-purple-500 w-16 h-16 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-chart-line text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">IPO 준비</h4>
+                                    <p class="text-gray-600">시리즈 A/B 투자 유치 완료</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-3xl p-8 card-shadow">
+                        <h3 class="text-2xl font-bold text-green-600 mb-6 flex items-center">
+                            <i class="fas fa-globe-asia mr-3"></i>
+                            장기 목표 (5-10년)
+                        </h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center p-4 bg-green-50 rounded-xl">
+                                <div class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">동남아시아 진출</h4>
+                                    <p class="text-gray-600">태국, 베트남 등 현지화 서비스</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center p-4 bg-blue-50 rounded-xl">
+                                <div class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-brain text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">AI 진단 보조</h4>
+                                    <p class="text-gray-600">딥러닝 기반 질병 예측 시스템</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center p-4 bg-purple-50 rounded-xl">
+                                <div class="bg-purple-500 w-16 h-16 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-home text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">스마트홈 생태계</h4>
+                                    <p class="text-gray-600">가정 건강관리 플랫폼 연동</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center p-4 bg-orange-50 rounded-xl">
+                                <div class="bg-orange-500 w-16 h-16 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-database text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">의료 데이터 사업</h4>
+                                    <p class="text-gray-600">익명화된 빅데이터 분석 서비스</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl p-8 text-white text-center">
+                    <h3 class="text-3xl font-black mb-4">우리의 궁극적 비전</h3>
+                    <p class="text-2xl font-bold mb-6">"모든 의원이 AI와 함께하는 스마트 진료 환경 구축"</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                        <div class="bg-white bg-opacity-20 rounded-2xl p-6 backdrop-filter backdrop-blur-lg">
+                            <i class="fas fa-universal-access text-4xl mb-4"></i>
+                            <h4 class="font-bold text-lg mb-2">의료 접근성 향상</h4>
+                            <p class="text-sm opacity-90">언제 어디서나 편리한 의료 서비스</p>
+                        </div>
+
+                        <div class="bg-white bg-opacity-20 rounded-2xl p-6 backdrop-filter backdrop-blur-lg">
+                            <i class="fas fa-tachometer-alt text-4xl mb-4"></i>
+                            <h4 class="font-bold text-lg mb-2">진료 효율성 극대화</h4>
+                            <p class="text-sm opacity-90">AI가 지원하는 정확하고 빠른 진료</p>
+                        </div>
+
+                        <div class="bg-white bg-opacity-20 rounded-2xl p-6 backdrop-filter backdrop-blur-lg">
+                            <i class="fas fa-trophy text-4xl mb-4"></i>
+                            <h4 class="font-bold text-lg mb-2">의료 혁신 선도</h4>
+                            <p class="text-sm opacity-90">차세대 의료 플랫폼의 글로벌 리더</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <!-- Q&A and Contact -->
+            <section class="mb-16">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-black text-gray-800 mb-4">감사합니다!</h2>
+                    <p class="text-2xl font-bold text-gradient">함께 의료의 미래를 만들어가요</p>
+                    <div class="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-600 mx-auto mt-4"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-3xl p-8 card-shadow">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                            <i class="fas fa-question-circle text-blue-500 mr-3"></i>
+                            주요 질의응답
+                        </h3>
+                        <div class="space-y-6">
+                            <div class="border-l-4 border-blue-500 pl-4">
+                                <h4 class="font-bold text-gray-800 mb-2">Q: 어떤 규모의 병원에 적합한가요?</h4>
+                                <p class="text-gray-600">A: 의사 1-3명, 직원 5-15명의 개인 의원에 최적화되어 있습니다.</p>
+                            </div>
+
+                            <div class="border-l-4 border-green-500 pl-4">
+                                <h4 class="font-bold text-gray-800 mb-2">Q: 기존 EMR과 연동이 가능한가요?</h4>
+                                <p class="text-gray-600">A: 네, 주요 EMR 업체들과 API 연동을 지원합니다.</p>
+                            </div>
+
+                            <div class="border-l-4 border-purple-500 pl-4">
+                                <h4 class="font-bold text-gray-800 mb-2">Q: 데이터 보안은 어떻게 보장되나요?</h4>
+                                <p class="text-gray-600">A: 병원 내 온프레미스 설치로 외부 유출 위험이 없습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-3xl p-8 card-shadow">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                            <i class="fas fa-address-book text-green-500 mr-3"></i>
+                            연락처 및 체험
+                        </h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center p-4 bg-gray-50 rounded-xl">
+                                <i class="fas fa-envelope text-blue-500 text-2xl mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">이메일</h4>
+                                    <p class="text-blue-600">smclinic@easymedi.co.kr</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center p-4 bg-gray-50 rounded-xl">
+                                <i class="fas fa-phone text-green-500 text-2xl mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">전화</h4>
+                                    <p class="text-green-600">010-5263-2876</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="flex items-center p-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl">
+                                <i class="fas fa-desktop text-2xl mr-4"></i>
+                                <div>
+                                    <h4 class="font-bold">데모 체험</h4>
+                                    <p>http://ca-7777.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 text-center p-6 bg-yellow-50 rounded-2xl">
+                            <i class="fas fa-star text-yellow-500 text-3xl mb-3"></i>
+                            <h4 class="text-xl font-bold text-yellow-800">지금 바로 무료 데모를 체험해보세요!</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 text-center p-8 bg-gray-100 rounded-3xl">
+                    <p class="text-gray-600">본 발표자료는 이지메디(EasyMedi) 투자 제안서입니다.</p>
+                    <p class="text-sm text-gray-500 mt-2">© 2025 EasyMedi. All rights reserved.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Region Chart
+        const regionCtx = document.getElementById('regionChart').getContext('2d');
+        new Chart(regionCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['서울', '경기', '부산/대구/인천', '기타 지역'],
+                datasets: [{
+                    data: [25, 24, 17, 34],
+                    backgroundColor: ['#667eea', '#764ba2', '#f093fb', '#f5f7fa'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 20,
+                            usePointStyle: true
+                        }
+                    }
+                }
+            }
+        });
+
+        // Target Market Chart
+        const targetMarketCtx = document.getElementById('targetMarketChart').getContext('2d');
+        new Chart(targetMarketCtx, {
+            type: 'bar',
+            data: {
+                labels: ['개인 내과/가정의학과', '소아과/피부과', '정형외과/이비인후과', '기타 전문과'],
+                datasets: [{
+                    label: '타겟 시장 비율 (%)',
+                    data: [40, 30, 20, 10],
+                    backgroundColor: ['#667eea', '#764ba2', '#f093fb', '#f5f7fa'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 50
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        // Revenue Chart
+        const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+        new Chart(revenueCtx, {
+            type: 'line',
+            data: {
+                labels: ['1년차 (2025)', '2년차 (2026)', '3년차 (2027)'],
+                datasets: [{
+                    label: '예상 매출 (억원)',
+                    data: [2.7, 10.8, 28.8],
+                    borderColor: '#667eea',
+                    backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                    borderWidth: 4,
+                    fill: true,
+                    tension: 0.4
+                }, {
+                    label: '고객 수 (개)',
+                    data: [150, 500, 1200],
+                    borderColor: '#764ba2',
+                    backgroundColor: 'rgba(118, 75, 162, 0.1)',
+                    borderWidth: 4,
+                    fill: false,
+                    yAxisID: 'y1',
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                scales: {
+                    y: {
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        title: {
+                            display: true,
+                            text: '매출 (억원)'
+                        }
+                    },
+                    y1: {
+                        type: 'linear',
+                        display: true,
+                        position: 'right',
+                        title: {
+                            display: true,
+                            text: '고객 수 (개)'
+                        },
+                        grid: {
+                            drawOnChartArea: false,
+                        },
+                    }
+                }
+            }
+        });
+
+        // Fund Allocation Chart
+        const fundCtx = document.getElementById('fundChart').getContext('2d');
+        new Chart(fundCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['개발 인력', '마케팅 & 영업', '서버 & 인프라', '운영 자금'],
+                datasets: [{
+                    data: [40, 30, 20, 10],
+                    backgroundColor: ['#667eea', '#764ba2', '#f093fb', '#f5f7fa'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 20,
+                            usePointStyle: true
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return context.label + ': ' + context.parsed + '% (' + (context.parsed * 0.05) + '억원)';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
